@@ -90,6 +90,24 @@ if err != nil {
 }
 
 ```
+
+go-* packages
+------------
+
+| Name        | Description           
+| ------------------|:---------------------:|
+| [go-errors](https://github.com/kataras/go-errors)      | Error handling
+| [go-fs](https://github.com/kataras/go-fs)      | FileSystem utils and common net/http static files handlers  
+| [go-events](https://github.com/kataras/go-events) | EventEmmiter for Go
+| [go-installer](https://github.com/kataras/go-installer) | Download & Install remote zipped files
+| [go-websocket](https://github.com/kataras/go-errors) | A websocket server and ,optionally, client side lib  for Go
+| [go-ssh](https://github.com/kataras/go-ssh) | SSH Server, build ssh interfaces, remote commands and remote cli with ease
+| [go-gzipwriter](https://github.com/kataras/go-gzipwriter) | Write gzip data to a io.Writer
+| [rizla](https://github.com/kataras/rizla) | Monitor and live-reload of your Go App
+| [Q](https://github.com/kataras/q) | HTTP2 Web Framework, 100% compatible with net/http
+| [Iris](https://github.com/kataras/iris) | The fastest web framework. Built on top of fasthttp
+
+
 FAQ
 ------------
 Explore [these questions](https://github.com/kataras/go-mailer/issues?go-mailer=label%3Aquestion) or navigate to the [community chat][Chat].
