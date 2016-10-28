@@ -10,6 +10,8 @@ type Config struct {
 	Username string
 	// Password is the auth password for the sender
 	Password string
+	// FromAddr is the 'from' part of the mail header, it overrides the username
+	FromAddr string
 	// FromAlias is the from part, if empty this is the first part before @ from the Username field
 	FromAlias string
 	// UseCommand enable it if you want to send e-mail with the mail command  instead of smtp

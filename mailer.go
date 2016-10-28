@@ -14,7 +14,7 @@ import (
 
 const (
 	// Version current version number
-	Version = "0.0.1"
+	Version = "0.0.2"
 )
 
 var buf bytebufferpool.Pool
@@ -42,12 +42,17 @@ type (
 // New creates and returns a new mail service
 func New(cfg Config) Service {
 	m := &mailer{config: cfg}
+	addr := cfg.FromAddr
+	if addr == "" {
+		addr = cfg.Username
+	}
+
 	if cfg.FromAlias == "" {
 		if !cfg.UseCommand && cfg.Username != "" && strings.Contains(cfg.Username, "@") {
-			m.fromAddr = mail.Address{Name: cfg.Username[0:strings.IndexByte(cfg.Username, '@')], Address: cfg.Username}
+			m.fromAddr = mail.Address{Name: cfg.Username[0:strings.IndexByte(cfg.Username, '@')], Address: addr}
 		}
 	} else {
-		m.fromAddr = mail.Address{Name: cfg.FromAlias, Address: cfg.Username}
+		m.fromAddr = mail.Address{Name: cfg.FromAlias, Address: addr}
 	}
 	return m
 }
