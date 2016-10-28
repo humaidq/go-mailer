@@ -41,6 +41,8 @@ type Config struct {
     Username string
     // Password is the auth password for the sender
     Password string
+    // FromAddr is the 'from' part of the mail header, it overrides the username
+    FromAddr string
     // FromAlias is the from part, if empty this is the first part before @ from the Username field
     FromAlias string
     // UseCommand enable it if you want to send e-mail with the mail command  instead of smtp
@@ -62,8 +64,9 @@ import "github.com/kataras/go-mailer"
 // sender configuration
 config := mailer.Config{
     Host:     "smtp.mailgun.org",
-    Username: "postmaster@sandbox661c307650f04e909150b37c0f3b2f09.mailgun.org",
+    Username: "postmaster",
     Password: "38304272b8ee5c176d5961dc155b2417",
+    FromAddr: "postmaster@sandbox661c307650f04e909150b37c0f3b2f09.mailgun.org",
     Port:     587,
     UseCommand:false,
     // Enable UseCommand to support sendmail unix command, if this field is true then Host, Username, Password and Port are not required, because these info already exists in your local sendmail configuration
