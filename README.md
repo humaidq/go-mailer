@@ -1,6 +1,6 @@
 <a href="https://travis-ci.org/kataras/go-mailer"><img src="https://img.shields.io/travis/kataras/go-mailer.svg?style=flat-square" alt="Build Status"></a>
-<a href="https://github.com/kataras/go-mailer/blob/master/LICENSE"><img src="https://img.shields.io/badge/%20license-MIT%20%20License%20-E91E63.svg?style=flat-square" alt="License"></a>
-<a href="https://github.com/kataras/go-mailer/releases"><img src="https://img.shields.io/badge/%20release%20-%20v0.0.2-blue.svg?style=flat-square" alt="Releases"></a>
+<a href="https://gopkg.in/kataras/go-mailer.v0/blob/master/LICENSE"><img src="https://img.shields.io/badge/%20license-MIT%20%20License%20-E91E63.svg?style=flat-square" alt="License"></a>
+<a href="https://gopkg.in/kataras/go-mailer.v0/releases"><img src="https://img.shields.io/badge/%20release%20-%20v0.0.2-blue.svg?style=flat-square" alt="Releases"></a>
 <a href="#docs"><img src="https://img.shields.io/badge/%20docs-reference-5272B4.svg?style=flat-square" alt="Read me docs"></a>
 <a href="https://kataras.rocket.chat/channel/go-mailer"><img src="https://img.shields.io/badge/%20community-chat-00BCD4.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://golang.org"><img src="https://img.shields.io/badge/powered_by-Go-3362c2.svg?style=flat-square" alt="Built with GoLang"></a>
@@ -16,7 +16,7 @@ Installation
 The only requirement is the [Go Programming Language](https://golang.org/dl).
 
 ```bash
-$ go get -u github.com/kataras/go-mailer
+$ go get -u gopkg.in/kataras/go-mailer.v0
 ```
 
 
@@ -57,7 +57,7 @@ type Config struct {
 **Usage**
 
 ```go
-import "github.com/kataras/go-mailer"
+import "gopkg.in/kataras/go-mailer.v0"
 
 //...
 
@@ -94,26 +94,9 @@ if err != nil {
 
 ```
 
-go-* packages
-------------
-
-| Name        | Description           
-| ------------------|:---------------------:|
-| [go-errors](https://github.com/kataras/go-errors)      | Error handling
-| [go-fs](https://github.com/kataras/go-fs)      | FileSystem utils and common net/http static files handlers  
-| [go-events](https://github.com/kataras/go-events) | EventEmmiter for Go
-| [go-installer](https://github.com/kataras/go-installer) | Download & Install remote zipped files
-| [go-websocket](https://github.com/kataras/go-errors) | A websocket server and ,optionally, client side lib  for Go
-| [go-ssh](https://github.com/kataras/go-ssh) | SSH Server, build ssh interfaces, remote commands and remote cli with ease
-| [go-gzipwriter](https://github.com/kataras/go-gzipwriter) | Write gzip data to a io.Writer
-| [rizla](https://github.com/kataras/rizla) | Monitor and live-reload of your Go App
-| [Q](https://github.com/kataras/q) | HTTP2 Web Framework, 100% compatible with net/http
-| [Iris](https://github.com/kataras/iris) | The fastest web framework. Built on top of fasthttp
-
-
 FAQ
 ------------
-Explore [these questions](https://github.com/kataras/go-mailer/issues?go-mailer=label%3Aquestion) or navigate to the [community chat][Chat].
+Explore [these questions](https://gopkg.in/kataras/go-mailer.v0/issues?go-mailer=label%3Aquestion) or navigate to the [community chat][Chat].
 
 Versioning
 ------------
@@ -145,9 +128,9 @@ License can be found [here](LICENSE).
 [Travis Widget]: https://img.shields.io/travis/kataras/go-mailer.svg?style=flat-square
 [Travis]: http://travis-ci.org/kataras/go-mailer
 [License Widget]: https://img.shields.io/badge/license-MIT%20%20License%20-E91E63.svg?style=flat-square
-[License]: https://github.com/kataras/go-mailer/blob/master/LICENSE
+[License]: https://gopkg.in/kataras/go-mailer.v0/blob/master/LICENSE
 [Release Widget]: https://img.shields.io/badge/release-v4.1.1-blue.svg?style=flat-square
-[Release]: https://github.com/kataras/go-mailer/releases
+[Release]: https://gopkg.in/kataras/go-mailer.v0/releases
 [Chat Widget]: https://img.shields.io/badge/community-chat-00BCD4.svg?style=flat-square
 [Chat]: https://kataras.rocket.chat/channel/go-mailer
 [ChatMain]: https://kataras.rocket.chat/channel/go-mailer
