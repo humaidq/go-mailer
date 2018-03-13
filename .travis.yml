@@ -13,8 +13,8 @@ install:
 script:
   - go test -v -cover ./...
 after_script:
-  # examples
-  - cd ./_examples
+  # example
+  - cd ./_example
   - go get ./...
   - go test -v -cover ./...
   - cd ../
