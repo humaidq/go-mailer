@@ -1,7 +1,7 @@
 # Mailer
 
-Simple E-mail sender for Go Programming Language.
-Supports rich e-mails and, optionally, *nix built'n `sendmail` command.
+Simple E-mail sender written in Go.
+Mailer supports rich e-mails and, optionally, *nix built'n `sendmail` command.
 
 <a href="https://travis-ci.org/kataras/go-mailer"><img src="https://img.shields.io/travis/kataras/go-mailer.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://github.com/kataras/go-mailer/blob/master/LICENSE"><img src="https://img.shields.io/badge/%20license-MIT%20%20License%20-E91E63.svg?style=flat-square" alt="License"></a>
