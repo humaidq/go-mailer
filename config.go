@@ -1,33 +1,33 @@
 package mailer
 
-// Config keeps the configs for mail sender service
+// Config contains those necessary fields that Mailer needs to send e-mails.
 type Config struct {
-	// Host is the server mail host, IP or address
+	// Host is the server mail host, IP or address.
 	Host string
-	// Port is the listening port
+	// Port is the listening port.
 	Port int
-	// Username is the auth username@domain.com for the sender
+	// Username is the auth username@domain.com for the sender.
 	Username string
-	// Password is the auth password for the sender
+	// Password is the auth password for the sender.
 	Password string
-	// FromAddr is the 'from' part of the mail header, it overrides the username
+	// FromAddr is the 'from' part of the mail header, it overrides the username.
 	FromAddr string
-	// FromAlias is the from part, if empty this is the first part before @ from the Username field
+	// FromAlias is the from part, if empty this is the first part before @ from the Username field.
 	FromAlias string
-	// UseCommand enable it if you want to send e-mail with the mail command  instead of smtp
+	// UseCommand enable it if you want to send e-mail with the mail command  instead of smtp.
 	//
-	// Host,Port & Password will be ignored
-	// ONLY FOR UNIX
+	// Host,Port & Password will be ignored.
+	// ONLY FOR UNIX.
 	UseCommand bool
 }
 
-// DefaultConfig returns the default configs for Mail
-// returns just an empty Mail struct
+// DefaultConfig returns the default configs for Mailer
+// returns just an empty Config struct.
 func DefaultConfig() Config {
 	return Config{}
 }
 
-// IsValid returns true if the mail configs are valid
+// IsValid returns true if the configuration is valid, otherwise false.
 func (m Config) IsValid() bool {
 	return (m.Host != "" && m.Port > 0 && m.Username != "" && m.Password != "") || m.UseCommand
 }
