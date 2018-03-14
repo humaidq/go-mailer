@@ -5,7 +5,7 @@ Mailer supports rich e-mails and, optionally, *nix built'n `sendmail` command.
 
 <a href="https://travis-ci.org/kataras/go-mailer"><img src="https://img.shields.io/travis/kataras/go-mailer.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://github.com/kataras/go-mailer/blob/master/LICENSE"><img src="https://img.shields.io/badge/%20license-MIT%20%20License%20-E91E63.svg?style=flat-square" alt="License"></a>
-<a href="https://github.com/kataras/go-mailer/releases"><img src="https://img.shields.io/badge/%20release%20-%20v0.0.2-blue.svg?style=flat-square" alt="Releases"></a>
+<a href="https://github.com/kataras/go-mailer/releases"><img src="https://img.shields.io/badge/%20release%20-%20v0.1.0-blue.svg?style=flat-square" alt="Releases"></a>
 <a href="https://godoc.org/github.com/kataras/go-mailer"><img src="https://img.shields.io/badge/%20docs-reference-5272B4.svg?style=flat-square" alt="Godocs"></a>
 <a href="https://kataras.rocket.chat/channel/go-mailer"><img src="https://img.shields.io/badge/%20community-chat-00BCD4.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://golang.org"><img src="https://img.shields.io/badge/powered_by-Go-3362c2.svg?style=flat-square" alt="Built with GoLang"></a>
@@ -25,11 +25,25 @@ $ go get -u github.com/kataras/go-mailer
 - `Mailer#Send` send an e-mail, supports text/html and `sendmail` unix command
 
 ```go
-// New returns a new *Mailer, which contains one single function, the `Send`.
+// New returns a new *Mailer, which contains the Send methods.
 New(cfg Config) *Mailer
+```
+
+```go
+// SendWithBytes same as `Send` but it accepts the body as raw []byte,
+// it's the fastest method to send e-mails.
+SendWithBytes(subject string, body []byte, to ...string) error 
+
 // Send sends an email to the recipient(s)
 // the body can be in HTML format as well.
 Send(subject string, body string, to ...string) error
+
+// SendWithReader same as `Send` but it accepts
+// an io.Reader that body can be retrieved and call the `SendWithBytes`.
+SendWithReader(subject string, bodyReader io.Reader, to ...string) error
+
+// SendWithReadCloser same as `SendWithReader` but it closes the reader at the end.
+SendWithReadCloser(subject string, bodyReader io.ReadCloser, to ...string) error
 ```
 
 ### Configuration
@@ -115,7 +129,7 @@ Explore [these questions](https://github.com/kataras/go-mailer/issues?go-mailer=
 
 ## Versioning
 
-Current: **v0.0.2**
+Current: **v0.1.0**
 
 Read more about Semantic Versioning 2.0.0
 

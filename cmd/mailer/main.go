@@ -9,12 +9,13 @@ import (
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
+	"github.com/kataras/go-mailer"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 )
 
-// Version is the current semantic version of the go-mailer's command line tool.
-const Version = "0.0.1"
+// Version is the current semantic version of the go-mailer package.
+const Version = mailer.Version
 
 var rootCmd = &cobra.Command{
 	Use:                        "mailer [command] [flags]",
