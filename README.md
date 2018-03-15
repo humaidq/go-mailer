@@ -3,6 +3,8 @@
 Simple E-mail sender written in Go.
 Mailer supports rich e-mails and, optionally, *nix built'n `sendmail` command.
 
+
+
 <a href="https://travis-ci.org/kataras/go-mailer"><img src="https://img.shields.io/travis/kataras/go-mailer.svg?style=flat-square" alt="Build Status"></a>
 <a href="https://github.com/kataras/go-mailer/blob/master/LICENSE"><img src="https://img.shields.io/badge/%20license-MIT%20%20License%20-E91E63.svg?style=flat-square" alt="License"></a>
 <a href="https://github.com/kataras/go-mailer/releases"><img src="https://img.shields.io/badge/%20release%20-%20v0.1.0-blue.svg?style=flat-square" alt="Releases"></a>
@@ -136,6 +138,18 @@ Read more about Semantic Versioning 2.0.0
  - http://semver.org/
  - https://en.wikipedia.org/wiki/Software_versioning
  - https://wiki.debian.org/UpstreamGuide#Releases_and_Versions
+
+### Upgrading from version 0.0.3 to 0.1.0
+
+One breaking change:
+
+The `Send` commands accept a `to ...string` instead of `to []string` now, this is an API Change, if you got multiple `to` emails then just append three dots at the end `...` and you'll be fine, i.e
+
+```go
+sender := mailer.New(mailer.Config{...})
+to := []string{"recipient1@example.com", "recipient2@example.com"}
+sender.Send("subject", "<p>body</p>", to...)
+```
 
 ## People
 

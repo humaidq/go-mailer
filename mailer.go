@@ -148,7 +148,7 @@ func (m *Mailer) sendSMTP(subject string, body []byte, to []string) error {
 
 	fullhost := fmt.Sprintf("%s:%d", m.config.Host, m.config.Port)
 
-	buffer.WriteString(fmt.Sprintf("%s: %s\r\n", "Form", m.fromAddr.String()))
+	buffer.WriteString(fmt.Sprintf("%s: %s\r\n", "From", m.fromAddr.String()))
 	writeHeaders(buffer, subject, body, to)
 
 	return smtp.SendMail(
